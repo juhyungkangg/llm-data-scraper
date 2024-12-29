@@ -235,7 +235,7 @@ def main():
 
     try:
         for idx, url in enumerate(urls, start=1):
-            logging.info(f"Processing URL {idx}/{len(urls)}: {url}")
+            logging.info(f"Processing URL {idx}/{len(urls)}: {url} {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             article = fetch_article_data(driver, url)
             if article:
                 # Append the article data to the JSONL file immediately
